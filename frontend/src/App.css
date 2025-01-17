@@ -13,7 +13,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .landingPageContainer nav h2 {
@@ -25,7 +24,6 @@
   display: flex;
   gap: 1.6rem;
   cursor: pointer;
-
 }
 
 .landingMainContainer {
@@ -36,11 +34,11 @@
   align-items: center;
 }
 
-.landingMainContainer>div:nth-child(1) {
+.landingMainContainer > div:nth-child(1) {
   font-size: 2.2rem;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] {
+.landingMainContainer > div:nth-child(1) div[role='button'] {
   background: #D97500;
   width: fit-content;
   padding: 1rem;
@@ -48,13 +46,13 @@
   margin-top: 1.9rem;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] a {
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
   text-decoration: none;
   color: white;
   font-size: 1.7rem;
 }
 
-.landingMainContainer>div:nth-child(2) img {
+.landingMainContainer > div:nth-child(2) img {
   height: 70vh;
   width: auto;
 }
@@ -66,8 +64,8 @@
   padding-inline: 20px;
   text-align: center;
   margin-top: 0.5rem;
-
 }
+
 .meetContainer {
   display: flex;
   padding-inline: 20px;
@@ -76,13 +74,10 @@
   justify-content: center;
 }
 
-
-
 .leftPanel {
   height: 100%;
   display: flex;
   align-items: center;
-
 }
 
 .rightPanel {
@@ -94,4 +89,104 @@
   width: 30vw;
   height: auto;
   border-radius: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 1.5rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.8rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 50vh;
+    width: auto;
+  }
+
+  .landingPageContainer nav .navlist {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landingPageContainer nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landingMainContainer {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 40vh;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    background-color: #FF9839; /* Button color */
+    color: white;
+    text-align: center;
+    margin: 20px auto; /* Centers the button horizontally */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn a {
+    color: white; /* Ensure the text is visible */
+    text-decoration: none;
+}
+  .landingPageContainer nav h2 {
+    font-size: 1.5rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.2rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 30vh;
+  }
+  .meetContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .meetContainer .rightPanel img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
 }
